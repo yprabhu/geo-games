@@ -1,0 +1,29 @@
+:root{--bg:#f6f4ee;--card:#fff;--ink:#1f2933;--mute:#6b7785;--accent:#2f6fed;--ok:#1f9d55;--bad:#d64545;--line:#e2ded3;--shape:#2f6fed;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--card:#1e242b;--ink:#eef1f4;--mute:#97a3b0;--accent:#6c9bff;--ok:#43c47a;--bad:#ef6b6b;--line:#2f3741;--shape:#6c9bff}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;display:flex;justify-content:center}
+main{width:100%;max-width:480px;padding:16px}
+h1{font-size:1.4rem;margin:4px 0 12px}
+.tabs{display:flex;gap:8px;margin-bottom:12px}
+.tab{flex:1;padding:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;font-size:1rem;font-weight:600;cursor:pointer}
+.tab.on{border-color:var(--accent);color:var(--accent)}
+.stats{display:flex;gap:8px;margin-bottom:12px}
+.stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;text-align:center}
+.stat b{display:block;font-size:1.4rem}
+.stat span{font-size:.75rem;color:var(--mute)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+.prompt{color:var(--mute);margin:0 0 8px}
+.flag{font-size:7rem;line-height:1.1}
+svg{width:100%;height:220px}
+svg path{fill:var(--shape);stroke:var(--shape);stroke-width:2;stroke-linejoin:round;fill-opacity:.85}
+.opts{display:grid;gap:10px;margin-top:16px}
+.opt{padding:16px;font-size:1.15rem;font-weight:600;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.opt:disabled{cursor:default}
+.opt.ok{border-color:var(--ok);background:var(--ok);color:#fff}
+.opt.bad{border-color:var(--bad);background:var(--bad);color:#fff}
+.msg{min-height:1.6em;margin:12px 0 0;font-weight:600}
+.next{margin-top:8px;padding:12px 24px;font-size:1rem;font-weight:600;border:0;border-radius:12px;background:var(--accent);color:#fff;cursor:pointer;visibility:hidden}
+.next.show{visibility:visible}
+.foot{color:var(--mute);font-size:.8rem;text-align:center;margin-top:16px}
